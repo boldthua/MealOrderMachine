@@ -12,10 +12,23 @@ namespace 點餐機
 {
     public partial class Form1 : Form
     {
+
         int priceSum = 0;
         public Form1()
         {
             InitializeComponent();
+
+            //打折折扣，研究 combobox如何使用
+            // 招牌便當買三送一
+            // 雞腿飯加鰻魚$200(原價240)
+            // 雞翅便當三個打八折
+            // 買鰻魚飯送炸豆腐
+            // 豬腳飯搭配單點鯖魚送雞塊
+            // 肥宅快樂水三杯100
+            // 紅茶,奶茶 特價20
+            // 雞腿飯搭配炸豆腐打9折
+            // 全場消費滿399打八折
+            // 全場打75折
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -40,6 +53,8 @@ namespace 點餐機
             string divider = "=================================================";
             flowLayoutPanel5.MenuLayout(divider);
 
+            RanderHandler.handler += ReceiveMenu;
+            comboBox1.SelectedIndex = 0;    
         }
 
         private void ShowDetail(List<string[]> foodLists)
@@ -67,12 +82,12 @@ namespace 點餐機
 
         private void ValueChange(object sender, EventArgs e)
         {
+                        
             NumericUpDown numChange = (NumericUpDown) sender;
             CheckBox checkBox = (CheckBox)numChange.Parent.Controls[0];
             if(numChange.Value == 0)
             {
                 checkBox.Checked = false;
-
             }
             else
             {
@@ -80,42 +95,40 @@ namespace 點餐機
                 checkBox.Checked = true;
                 numChange.Value = temp;
             }
-            flowLayoutPanel5.Controls.Clear();
-            string[] checkList = { "品項", "單價", "數量", "小計" };
-            flowLayoutPanel5.MenuLayout(checkList);
 
-            string divider = "=================================================";
-            flowLayoutPanel5.MenuLayout(divider);
-
-            List<string[]> mainDietList = flowLayoutPanel1.OrderedList();
-            List<string[]> singelFoodList = flowLayoutPanel2.OrderedList();
-            List<string[]> drinksList = flowLayoutPanel3.OrderedList();
-            List<string[]> bitesList = flowLayoutPanel4.OrderedList();
-
-            ShowDetail(mainDietList);
-            ShowDetail(singelFoodList);
-            ShowDetail(drinksList);
-            ShowDetail(bitesList);
-
-            flowLayoutPanel5.MenuLayout(divider);
+            
+            string[] meal = numChange.Parent.Controls[0].Text.Split('$');
+            int itemPrice = int.Parse(meal[1]);
+            Item item = new Item(meal[0], itemPrice, (int)numChange.Value);
+            Order.GetOrdered(comboBox1.Text,item);                       
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
             priceSum = 0;
-            foreach (Control control in this.Controls)
+            foreach (Item oneMeal in Order.items)
             {
-                if(control is FlowLayoutPanel panel && control.Tag == "menu")
-                {
-                    priceSum += panel.CalculatePrice();
-                }
+                int mealPrice = oneMeal.price * oneMeal.quantity;
+                priceSum += mealPrice;
             }
-               
+
             totalLab.Text = priceSum.ToString();
         }
 
+        private void ReceiveMenu(object sender, FlowLayoutPanel fPanel)
+        {
+            flowLayoutPanel5.Controls.Clear();
+            flowLayoutPanel5.Controls.Add(fPanel);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string discountType = comboBox1.Text;
+            Order.ChangeDiscount(discountType);
+        }
     }
 }
+
+
+

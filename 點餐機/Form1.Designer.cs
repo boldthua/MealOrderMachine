@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -132,14 +133,36 @@
             // 
             this.flowLayoutPanel5.Location = new System.Drawing.Point(728, 21);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
-            this.flowLayoutPanel5.Size = new System.Drawing.Size(438, 602);
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(450, 602);
             this.flowLayoutPanel5.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "請選擇以下折扣",
+            "招牌便當買三送一",
+            "雞腿飯加鰻魚$200(原價240)",
+            "雞翅便當三個打八折",
+            "買鰻魚飯送炸豆腐",
+            "豬腳飯搭配單點鯖魚送雞塊",
+            "肥宅快樂水三杯100",
+            "紅茶, 奶茶 特價20",
+            "雞腿飯搭配炸豆腐打9折",
+            "全場消費滿399打八折",
+            "全場打75折"});
+            this.comboBox1.Location = new System.Drawing.Point(728, 650);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(155, 24);
+            this.comboBox1.TabIndex = 14;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 700);
+            this.ClientSize = new System.Drawing.Size(1332, 700);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.flowLayoutPanel5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.flowLayoutPanel3);
@@ -172,6 +195,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

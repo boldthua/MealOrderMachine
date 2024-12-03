@@ -31,7 +31,7 @@ namespace 點餐機
         {
             for (int i = 0; i < menu.Length; i++)
             {
-                FlowLayoutPanel panel = new FlowLayoutPanel() { Size = new Size(300,25)};
+                FlowLayoutPanel panel = new FlowLayoutPanel() { Size = new Size(350,25)};
                 CheckBox checkBox = new CheckBox() { Text = menu[i] };
                 NumericUpDown numericUpDown = new NumericUpDown() { Size = new Size(80, 25) };
                 checkBox.CheckedChanged += checkedChange;
@@ -44,41 +44,44 @@ namespace 點餐機
 
         public static void MenuLayout(this FlowLayoutPanel input, string[] checkList)
         {
+            FlowLayoutPanel subFPanel = new FlowLayoutPanel();
+            subFPanel.Width = input.Width;
+            subFPanel.Height = 25;
             foreach (string str in checkList)
             {
-                Label lbl = new Label() { Text = str, Size = new Size(75, 25) };
+                Label lbl = new Label() { Text = str, Size = new Size(70, 25) };
                 if (int.TryParse(str, out _))
                 {
                     lbl.Text = str + "          ";
                     lbl.TextAlign = ContentAlignment.TopRight;
                 }
-
-                input.Controls.Add(lbl);
+                subFPanel.Controls.Add(lbl);
             }
+            input.Controls.Add(subFPanel);
         }
 
         public static void MenuLayout(this FlowLayoutPanel input, string divider)
         {
-                Label lbl = new Label() { Text = divider, Size = new Size(300, 25) };
+                Label lbl = new Label() { Text = divider, Size = new Size(350, 25) };
                 input.Controls.Add(lbl);
         }
 
-        public static int CalculatePrice(this FlowLayoutPanel input)
-        {
-            int price = 0;
-            foreach (FlowLayoutPanel panel in input.Controls)
-            {
-                CheckBox checkbox = (CheckBox)panel.Controls[0];
-                int quantity = (int)((NumericUpDown)panel.Controls[1]).Value;
-                string[] temp = panel.Controls[0].Text.Split('$');
-                int itemPrice = int.Parse(temp[1]);
-                if (checkbox.Checked)
-                {
-                    price += (itemPrice* quantity);
-                }
-            }
-            return price;
-        }
+        //public static int CalculatePrice(this FlowLayoutPanel input)
+        //{
+        //    int price = 0;
+        //    foreach (FlowLayoutPanel panel in input.Controls)
+        //    {
+        //        CheckBox checkbox = (CheckBox)panel.Controls[0];
+        //        int quantity = (int)((NumericUpDown)panel.Controls[1]).Value;
+        //        string[] temp = panel.Controls[0].Text.Split('$');
+        //        int itemPrice = int.Parse(temp[1]);
+        //        if (checkbox.Checked)
+        //        {
+        //            price += (itemPrice* quantity);
+        //        }
+        //    }
+        //    return price;
+        //}
 
         public static List<string[]> OrderedList(this FlowLayoutPanel input)
         {
