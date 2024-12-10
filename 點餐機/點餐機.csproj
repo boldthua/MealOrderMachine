@@ -48,14 +48,15 @@
   <ItemGroup>
     <Compile Include="DisCount.cs" />
     <Compile Include="Discounts\ADisCount.cs" />
+    <Compile Include="Discounts\DiscountFactory.cs" />
+    <Compile Include="Discounts\雞翅便當三個打八折.cs" />
+    <Compile Include="Discounts\豬腳飯搭配單點鯖魚送雞塊.cs" />
     <Compile Include="Discounts\雞腿飯搭配炸豆腐打9折.cs" />
     <Compile Include="Discounts\全場消費滿399打八折.cs" />
     <Compile Include="Discounts\全場打75折.cs" />
-    <Compile Include="Discounts\紅茶奶茶特價20.cs" />
     <Compile Include="Discounts\雞腿飯加鰻魚200原價240.cs" />
-    <Compile Include="Discounts\雞翅便當三個打八折.cs" />
+    <Compile Include="Discounts\紅茶奶茶特價20.cs" />
     <Compile Include="Discounts\肥宅快樂水三杯100.cs" />
-    <Compile Include="Discounts\豬腳飯搭配單點鯖魚送雞塊.cs" />
     <Compile Include="Discounts\買鰻魚飯送炸豆腐.cs" />
     <Compile Include="Discounts\招牌便當買三送一.cs" />
     <Compile Include="Extension.cs" />
