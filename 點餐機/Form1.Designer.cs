@@ -30,21 +30,13 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.totalLab = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1046, 643);
+            this.button1.Location = new System.Drawing.Point(1208, 643);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 1;
@@ -55,83 +47,15 @@
             // totalLab
             // 
             this.totalLab.AutoSize = true;
-            this.totalLab.Location = new System.Drawing.Point(954, 651);
+            this.totalLab.Location = new System.Drawing.Point(1071, 656);
             this.totalLab.Name = "totalLab";
             this.totalLab.Size = new System.Drawing.Size(14, 16);
             this.totalLab.TabIndex = 2;
             this.totalLab.Text = "0";
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 44);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(298, 266);
-            this.flowLayoutPanel1.TabIndex = 5;
-            this.flowLayoutPanel1.Tag = "menu";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "主餐";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(367, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "單點";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(364, 44);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(348, 266);
-            this.flowLayoutPanel2.TabIndex = 7;
-            this.flowLayoutPanel2.Tag = "menu";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(367, 326);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "飲料";
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(364, 357);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(348, 266);
-            this.flowLayoutPanel3.TabIndex = 11;
-            this.flowLayoutPanel3.Tag = "menu";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 326);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "小吃";
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(12, 357);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(298, 266);
-            this.flowLayoutPanel4.TabIndex = 9;
-            this.flowLayoutPanel4.Tag = "menu";
-            // 
             // flowLayoutPanel5
             // 
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(728, 21);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(833, 21);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(450, 602);
             this.flowLayoutPanel5.TabIndex = 13;
@@ -139,19 +63,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "請選擇以下折扣",
-            "招牌便當買三送一",
-            "雞腿飯加鰻魚$200(原價240)",
-            "雞翅便當三個打八折",
-            "買鰻魚飯送炸豆腐",
-            "豬腳飯搭配單點鯖魚送雞塊",
-            "肥宅快樂水三杯100",
-            "紅茶, 奶茶 特價20",
-            "雞腿飯搭配炸豆腐打9折",
-            "全場消費滿399打八折",
-            "全場打75折"});
-            this.comboBox1.Location = new System.Drawing.Point(728, 650);
+            this.comboBox1.Location = new System.Drawing.Point(833, 648);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(155, 24);
             this.comboBox1.TabIndex = 14;
@@ -164,14 +76,6 @@
             this.ClientSize = new System.Drawing.Size(1332, 700);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.flowLayoutPanel5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.flowLayoutPanel3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.flowLayoutPanel4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.flowLayoutPanel2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.totalLab);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -186,14 +90,6 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label totalLab;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.ComboBox comboBox1;
     }

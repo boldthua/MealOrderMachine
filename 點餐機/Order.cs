@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static 點餐機.Menus;
 
 namespace 點餐機
 {
@@ -10,7 +11,7 @@ namespace 點餐機
     {
         public static List<Item> items = new List<Item>();
 
-        public static void GetOrdered(string discountType,Item item)
+        public static void GetOrdered(Discountstrategy discountType,Item item)
         {
             Item order = items.FirstOrDefault(x => x.name == item.name);
             if (order == null)
@@ -28,7 +29,7 @@ namespace 點餐機
             DisCount.DicountOrder(discountType, items);
         }
 
-        public static void ChangeDiscount(string discountType)
+        public static void ChangeDiscount(Discountstrategy discountType)
         {
             DisCount.DicountOrder(discountType, items);
 

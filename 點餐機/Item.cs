@@ -11,8 +11,11 @@ namespace 點餐機
         public string name;
         public int price;
         public int quantity;
-        public int subtotal;    
-        
+        public int subtotal;
+
+        public Item()
+        {
+        }
 
         public Item(string name, int price, int quantity)
         {

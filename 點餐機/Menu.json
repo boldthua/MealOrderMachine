@@ -1,0 +1,557 @@
+{
+  "Menu": [
+    {
+      "sectionName": "主餐",
+      "foods": [
+        {
+          "foodName": "招牌便當",
+          "price": 65
+        },
+        {
+          "foodName": "鯖魚便當",
+          "price": 85
+        },
+        {
+          "foodName": "雞腿飯",
+          "price": 90
+        },
+        {
+          "foodName": "雞翅便當",
+          "price": 95
+        },
+        {
+          "foodName": "豬腳飯",
+          "price": 120
+        },
+        {
+          "foodName": "鰻魚飯",
+          "price": 180
+        }
+      ]
+    },
+    {
+      "sectionName": "單點",
+      "foods": [
+        {
+          "foodName": "鯖魚",
+          "price": 60
+        },
+        {
+          "foodName": "雞腿",
+          "price": 65
+        },
+        {
+          "foodName": "雞翅",
+          "price": 60
+        },
+        {
+          "foodName": "豬腳",
+          "price": 80
+        },
+        {
+          "foodName": "鰻魚",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "sectionName": "飲料",
+      "foods": [
+        {
+          "foodName": "紅茶",
+          "price": 25
+        },
+        {
+          "foodName": "奶茶",
+          "price": 35
+        },
+        {
+          "foodName": "豆漿",
+          "price": 30
+        },
+        {
+          "foodName": "咖啡",
+          "price": 35
+        },
+        {
+          "foodName": "肥宅快樂水",
+          "price": 40
+        }
+      ]
+    },
+    {
+      "sectionName": "點心",
+      "foods": [
+        {
+          "foodName": "雞塊",
+          "price": 30
+        },
+        {
+          "foodName": "薯條",
+          "price": 40
+        },
+        {
+          "foodName": "薯餅",
+          "price": 45
+        },
+        {
+          "foodName": "炸豆腐",
+          "price": 40
+        },
+        {
+          "foodName": "花枝丸",
+          "price": 40
+        },
+        {
+          "foodName": "毛豆",
+          "price": 30
+        }
+      ]
+    }
+  ],
+  "DiscountStrategy": [
+    {
+      "discountName": "招牌便當買三送一",
+      "strategy": "點餐機.Strategies.BuyMGetNStrategy",
+      "BuyMGetN": {
+        "item1": "招牌便當",
+        "item1Amount": 3,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "招牌便當",
+        "freeItem1Amount": 1,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "紅茶五杯，一杯免費",
+      "strategy": "點餐機.Strategies.BuyMGetNStrategy",
+      "BuyMGetN": {
+        "item1": "紅茶",
+        "item1Amount": 4,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "紅茶",
+        "freeItem1Amount": 1,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "雞腿飯加鰻魚$200",
+      "strategy": "點餐機.Strategies.SpecialPriceStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "雞腿飯",
+        "item1Amount": 1,
+        "item2": "鰻魚",
+        "item2Amount": 1,
+        "price": 200
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "雞翅便當三個打八折",
+      "strategy": "點餐機.Strategies.DiscountOffStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "雞翅便當",
+        "item1Amount": 3,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0.8
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "買鰻魚飯送炸豆腐",
+      "strategy": "點餐機.Strategies.BuyMGetNStrategy",
+      "BuyMGetN": {
+        "item1": "鰻魚飯",
+        "item1Amount": 1,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "炸豆腐",
+        "freeItem1Amount": 1,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "豬腳飯搭配單點鯖魚送雞塊",
+      "strategy": "點餐機.Strategies.BuyMGetNStrategy",
+      "BuyMGetN": {
+        "item1": "豬腳飯",
+        "item1Amount": 1,
+        "item2": "鯖魚",
+        "item2Amount": 1,
+        "freeItem1": "雞塊",
+        "freeItem1Amount": 1,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "肥宅快樂水三杯100",
+      "strategy": "點餐機.Strategies.SpecialPriceStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "肥宅快樂水",
+        "item1Amount": 3,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 100
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "紅茶, 奶茶 特價20",
+      "strategy": "點餐機.Strategies.FlatPriceStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [
+          "紅茶",
+          "奶茶"
+        ],
+        "price": 20
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "雞腿飯搭配炸豆腐打9折",
+      "strategy": "點餐機.Strategies.DiscountOffStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "雞腿飯",
+        "item1Amount": 1,
+        "item2": "炸豆腐",
+        "item2Amount": 1,
+        "discount": 0.9
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "全場消費滿399打八折",
+      "strategy": "點餐機.Strategies.DiscountOffStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 399,
+        "cash": 0,
+        "persentage": 0.8
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0
+      }
+    },
+    {
+      "discountName": "全場打75折",
+      "strategy": "點餐機.Strategies.AllDiscountStrategy",
+      "BuyMGetN": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "freeItem1": "",
+        "freeItem1Amount": 0,
+        "freeItem2": "",
+        "freeItem2Amount": 0
+      },
+      "SpecialPrice": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "price": 0
+      },
+      "FlatPrice": {
+        "items": [],
+        "price": 0
+      },
+      "Rebate": {
+        "price": 0,
+        "cash": 0,
+        "persentage": 0
+      },
+      "DiscountOff": {
+        "item1": "",
+        "item1Amount": 0,
+        "item2": "",
+        "item2Amount": 0,
+        "discount": 0
+      },
+      "AllDiscount": {
+        "persentage": 0.75
+      }
+    }
+  ]
+}

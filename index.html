@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var datas = {
+  "menu" :
+  [
+    {
+      "sectionName":"主餐",
+      "foods": [
+      {
+        "foodName": "招牌便當", 
+        "price": 65},
+      {
+        "foodName": "鯖魚便當", 
+        "price": 85},
+      {
+        "foodName": "雞腿飯", 
+        "price": 90},
+      {
+        "foodName": "雞翅便當", 
+        "price": 95},
+      {
+        "foodName": "豬腳飯", 
+        "price": 120},
+      {
+        "foodName": "鰻魚飯", 
+        "price": 180}
+      ]
+    },
+    {
+       "sectionName":"單點",
+      "foods": [
+      {
+        "foodName": "鯖魚", 
+        "price": 60},
+      {
+        "foodName": "雞腿", 
+        "price": 65},
+      {
+        "foodName": "雞翅", 
+        "price": 60},
+      {
+        "foodName": "豬腳", 
+        "price": 80},
+      {
+        "foodName": "鰻魚", 
+        "price": 150}
+      ]
+    },
+    {
+       "sectionName":"飲料",
+    "foods":[
+      {
+        "foodName": "紅茶", 
+        "price": 25},
+      {
+        "foodName": "奶茶", 
+        "price": 35},
+      {
+        "foodName": "豆漿", 
+        "price": 30},
+      {
+        "foodName": "咖啡", 
+        "price": 35},
+      {
+        "foodName": "肥宅快樂水", 
+        "price": 40}
+      ]
+    },
+    {
+       "sectionName":"點心",
+       "foods":[
+      {
+        "foodName": "雞塊", 
+        "price": 30},
+      {
+        "foodName": "薯條", 
+        "price": 40},
+      {
+        "foodName": "薯餅", 
+        "price": 45},
+      {
+        "foodName": "炸豆腐", 
+        "price": 40},
+      {
+        "foodName": "花枝丸", 
+        "price": 40},
+      {
+        "foodName": "毛豆", 
+        "price": 30}
+      ]
+    }
+  ]
+}
+
+console.log(datas);
+for (var i=0 ; i< datas.menu.length; i++)
+{
+    //console.log(datas.menu[i].foods) // mainfoods singlefoods drinks littlebites
+    var section = datas.menu[i].foods;
+    console.log(datas.menu[i].sectionName)
+    for(var j=0 ; j< section.length; j++)
+    {   
+        console.log(section[j].foodName + ':' + section[j].price)
+        // var food = datas.menu[i][j] // 得到一個物件 {"a": x, "b": y}
+        // for(var k=0; k< datas.menu[i][j].length; k++)
+        // {
+        //     Console.log(datas.menu[i][j][k].value)
+        // }
+        
+    }
+    console.log('=================================')
+
+}
+</script>

@@ -8,6 +8,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static 點餐機.Menus;
 
 namespace 點餐機
 {
@@ -27,12 +28,12 @@ namespace 點餐機
             return count;
         }
 
-        public static void MenuLayout(this FlowLayoutPanel input, string[] menu,EventHandler checkedChange,EventHandler valueChange)
+        public static void MenuLayout(this FlowLayoutPanel input, Food[] menu,EventHandler checkedChange,EventHandler valueChange)
         {
             for (int i = 0; i < menu.Length; i++)
             {
-                FlowLayoutPanel panel = new FlowLayoutPanel() { Size = new Size(350,25)};
-                CheckBox checkBox = new CheckBox() { Text = menu[i] };
+                FlowLayoutPanel panel = new FlowLayoutPanel() {Size = new Size(325,25)};
+                CheckBox checkBox = new CheckBox() { Text = menu[i].foodName +" $"+ menu[i].price };
                 NumericUpDown numericUpDown = new NumericUpDown() { Size = new Size(80, 25) };
                 checkBox.CheckedChanged += checkedChange;
                 numericUpDown.ValueChanged += valueChange;

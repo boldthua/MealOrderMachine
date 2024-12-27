@@ -13,7 +13,7 @@ namespace 點餐機
 
         public static void Notify(FlowLayoutPanel fPanel)
         {  
-            handler.Invoke(null, fPanel);
+            handler?.Invoke(null, fPanel);
         }
 
 
