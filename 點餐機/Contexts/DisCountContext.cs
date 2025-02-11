@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using 點餐機.Strategies;
 
 namespace 點餐機.Contexts
 {
@@ -14,9 +15,9 @@ namespace 點餐機.Contexts
             this.promotion = promotion;
         }
 
-        public int GetResult(int price)
+        public void DisCount()
         {
-            return 0;
+            promotion.DisCount();
         }
     }
 }

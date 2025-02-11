@@ -27,11 +27,17 @@ namespace 點餐機
     {
         public static void DicountOrder(Discountstrategy discountType,List<Item> list)
         {
-            list.RemoveAll(x => x.name.Contains("折扣") || x.name.Contains("贈送"));
+            list.RemoveAll(x => x.name.Contains("折扣") || x.name.Contains("贈送") || x.name.Contains("折價") || x.name.Contains("特價"));
+
+            if (discountType == null)
+                return;
 
             Type type = Type.GetType(discountType.strategy); // .strategy是字串
-            APromotionStrategy strategy = (APromotionStrategy)Activator.CreateInstance(type, new object[] { list, discountType});
+            APromotionStrategy strategy = (APromotionStrategy)Activator.CreateInstance(type, new object[] { list, discountType });
+
+            
             DisCountContext context = new DisCountContext(strategy);
+            context.DisCount();
             ShowPanel.Show(list);
 
             // context.Discount();

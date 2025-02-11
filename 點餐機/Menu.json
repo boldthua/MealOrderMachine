@@ -475,7 +475,7 @@
     },
     {
       "discountName": "全場消費滿399打八折",
-      "strategy": "點餐機.Strategies.DiscountOffStrategy",
+      "strategy": "點餐機.Strategies.RebateStrategy",
       "BuyMGetN": {
         "item1": "",
         "item1Amount": 0,

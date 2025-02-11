@@ -33,6 +33,7 @@ namespace 點餐機
             public Rebate Rebate { get; set; }
             public Discountoff DiscountOff { get; set; }
             public Alldiscount AllDiscount { get; set; }
+            public Volume VolumeDiscount { get; set; }
         }
 
         public class Buymgetn
@@ -83,5 +84,13 @@ namespace 點餐機
             public float persentage { get; set; }
         }
 
+
+        public class Volume
+        {
+            public string[] items { get; set; }
+            public int volume { get; set; }
+            public int discount { get; set; }
+
+        }
     }
 }

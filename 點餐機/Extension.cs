@@ -33,7 +33,7 @@ namespace 點餐機
             for (int i = 0; i < menu.Length; i++)
             {
                 FlowLayoutPanel panel = new FlowLayoutPanel() {Size = new Size(325,25)};
-                CheckBox checkBox = new CheckBox() { Text = menu[i].foodName +" $"+ menu[i].price };
+                CheckBox checkBox = new CheckBox() { Text = menu[i].foodName +"$"+ menu[i].price };
                 NumericUpDown numericUpDown = new NumericUpDown() { Size = new Size(80, 25) };
                 checkBox.CheckedChanged += checkedChange;
                 numericUpDown.ValueChanged += valueChange;
@@ -50,7 +50,7 @@ namespace 點餐機
             subFPanel.Height = 25;
             foreach (string str in checkList)
             {
-                Label lbl = new Label() { Text = str, Size = new Size(70, 25) };
+                Label lbl = new Label() { Text = str, Size = new Size(80, 25) };
                 if (int.TryParse(str, out _))
                 {
                     lbl.Text = str + "          ";

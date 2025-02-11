@@ -15,7 +15,7 @@ namespace 點餐機.Discounts
 
         public override void Discount()
         {
-            int sum = items.Sum(x => x.subtotal);
+            int sum = items.Sum(x => x.Subtotal);
             if (sum >= 399)
             {
                 int discount = (int)(sum * 0.2) * -1;

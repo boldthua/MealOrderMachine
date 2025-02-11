@@ -9,9 +9,9 @@ using static 點餐機.Menus;
 
 namespace 點餐機.Strategies
 {
-    internal class SpecialpriceStrategy : APromotionStrategy
+    internal class SpecialPriceStrategy : APromotionStrategy
     {
-        public SpecialpriceStrategy(List<Item> items, Menus.Discountstrategy strategy) : base(items, strategy)
+        public SpecialPriceStrategy(List<Item> items, Menus.Discountstrategy strategy) : base(items, strategy)
         {
         }
 
@@ -26,11 +26,14 @@ namespace 點餐機.Strategies
             if (item1 != null && item1.quantity >= type.item1Amount)
             {
                 int specialPriceCount = item1.quantity / type.item1Amount;
-                if (item2.name != null)
+                if (item2 != null)
                 {
                     specialPriceCount = Math.Min((item1.quantity / type.item1Amount), (item2.quantity / type.item2Amount));
+                    items.Add(new Item("(特價)" + strategy.discountName, type.price - (item1.price* type.item1Amount + item2.price* type.item2Amount), specialPriceCount));
+
                 }
-                items.Add(new Item("(特價)" + strategy.discountName, type.price - (item1.price + item2.price), specialPriceCount));
+                else 
+                    items.Add(new Item("(特價)" + strategy.discountName, type.price - (item1.price* type.item1Amount), specialPriceCount));
             }
         }
     }

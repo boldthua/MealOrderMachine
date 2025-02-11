@@ -11,7 +11,13 @@ namespace 點餐機
         public string name;
         public int price;
         public int quantity;
-        public int subtotal;
+        public int Subtotal
+        {
+            get
+            {
+                return quantity*price;
+            }
+        }
 
         public Item()
         {
@@ -22,7 +28,6 @@ namespace 點餐機
             this.name = name;
             this.price = price;
             this.quantity = quantity;
-            this.subtotal = price * quantity;
         }   
     }
 }

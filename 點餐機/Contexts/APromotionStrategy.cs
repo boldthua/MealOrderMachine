@@ -14,6 +14,5 @@ namespace 點餐機.Contexts
         }
         public abstract void DisCount();
 
-
     }
 }

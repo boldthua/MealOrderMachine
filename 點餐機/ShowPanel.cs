@@ -13,7 +13,7 @@ namespace 點餐機
         public static void Show(List<Item> Orders) 
         {
             FlowLayoutPanel panel = new FlowLayoutPanel();
-            panel.Width = 400;
+            panel.Width = 600;
             panel.Height = 600; 
             string[] checkList = { "品項", "單價", "數量", "小計" };
             panel.MenuLayout(checkList);

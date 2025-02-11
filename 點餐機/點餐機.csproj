@@ -80,12 +80,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowPanel.cs" />
-    <Compile Include="Strategies\AlldiscountStrategy.cs" />
+    <Compile Include="Strategies\AllDiscountStrategy.cs" />
     <Compile Include="Strategies\BuyMGetNStrategy.cs" />
-    <Compile Include="Strategies\DiscountoffStrategy.cs" />
+    <Compile Include="Strategies\DiscountOffStrategy.cs" />
     <Compile Include="Strategies\FlatPriceStrategy.cs" />
     <Compile Include="Strategies\RebateStrategy.cs" />
     <Compile Include="Strategies\SpecialpriceStrategy.cs" />
+    <Compile Include="Strategies\VolumeDiscountStrategy.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

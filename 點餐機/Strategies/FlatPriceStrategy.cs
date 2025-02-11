@@ -15,7 +15,21 @@ namespace 點餐機.Strategies
 
         public override void DisCount()
         {
-            throw new NotImplementedException();
+            Menus.Flatprice type = this.strategy.FlatPrice;
+            List<Item> specialPriceItems = new List<Item>();
+
+            foreach (var item in items) 
+            {
+                if (type.items.Contains(item.name))
+                {
+                    string itemName = item.name;
+
+                    int priceInterval = type.price - item.price;
+
+                    specialPriceItems.Add(new Item($"(特價) {strategy.discountName} ({itemName})", priceInterval, item.quantity));
+                }
+            }
+            items.AddRange(specialPriceItems);
         }
     }
 }

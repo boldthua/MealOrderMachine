@@ -93,9 +93,6 @@ namespace 點餐機
             comboBox1.ValueMember = "Value";
 
 
-
-
-
             string[] checkList = {"品項", "單價", "數量", "小計"};
             flowLayoutPanel5.MenuLayout(checkList);
 
@@ -147,6 +144,7 @@ namespace 點餐機
             
             string[] meal = numChange.Parent.Controls[0].Text.Split('$');
             int itemPrice = int.Parse(meal[1]);
+            Console.WriteLine($"*{meal[0]}*");
             Item item = new Item(meal[0], itemPrice, (int)numChange.Value);
             Order.GetOrdered((Discountstrategy)comboBox1.SelectedValue,item);                       
         }
@@ -172,9 +170,17 @@ namespace 點餐機
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Order.ChangeDiscount((Discountstrategy)comboBox1.SelectedValue);
+            if(comboBox1.SelectedValue is  Discountstrategy selectedstrategy)
+            {
+                Order.ChangeDiscount(selectedstrategy);
+            }
+            
         }
 
+        private void flowLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

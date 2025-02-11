@@ -26,7 +26,7 @@ namespace 點餐機.Strategies
             if (item1 != null && item1.quantity >= type.item1Amount)
             {
                 int freeCount = item1.quantity / type.item1Amount;
-                if (item2.name != null)
+                if (item2 != null)
                 {
                     freeCount = Math.Min((item1.quantity / type.item1Amount), (item2.quantity / type.item2Amount));
                 }
